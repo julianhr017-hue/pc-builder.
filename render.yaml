@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: extremis-final-fusion
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 2h
